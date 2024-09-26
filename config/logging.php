@@ -50,7 +50,12 @@ return [
     |
     */
 
-    'channels' => [
+        'channels' => [
+            'single' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/log.txt'),
+            'level' => 'debug',
+        ],
 
         'stack' => [
             'driver' => 'stack',

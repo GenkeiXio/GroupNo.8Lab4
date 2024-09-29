@@ -4,7 +4,7 @@
 @section('title', 'Contact Us')
 
 @section('content')
-    <main class="site-main">
+    <main class="contactus-main">
         <form action="/welcome" method="POST" onsubmit="showConfirmation(event)">
             @csrf
             <h1>CONTACT US</h1>

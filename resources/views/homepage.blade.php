@@ -4,49 +4,99 @@
 @section('title', 'Home Page')
 
 @section('content') 
-    <main class="home-main">
-        <div class="home-bg-blur"></div>
         <section class="hero">
-            <h2>Welcome {{ $username }}, to Robiel Prince Cafe</h2>
-            <div class="open-message">
-                <h3>Where we serve light meals and delicious snack</h3>
+            <div class="home-bg-blur"></div>
+            <div class="home-content">
+                <h1>Welcome to Robiel Prince Café {{ $username }}!</h1>
+                <h2>Where every bite is a <span>little joy.</span></h2>
+                <p>Savor light meals, delightful snacks, and a cozy atmosphere crafted just for you.</p>
             </div>
         </section>
-        <section class="features">
-            <h2>We are here to Offer:</h2>
+
+        <section class="home-heading">
+            <div class="heading">Our <span>Features</span></div> 
+
             <div class="feature">
-                <i class="fas fa-coffee"></i>
-                <h3>BREAKFAST/SNACK STAPLES</h3>
-                <p>
-                    Start your day with the comforting flavors of our breakfast classics, or indulge in a quick bite to keep you energized 
-                    throughout the day. At Robiel Prince Cafe, we believe in offering a selection of delicious and satisfying meals that 
-                    cater to every craving. Whether you're in the mood for something light and nutritious or a hearty treat, our carefully 
-                    crafted menu promises the perfect balance of taste and quality. Dive into our staples and discover your new favorite way 
-                    to enjoy a moment of peace and deliciousness.
-                </p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-pizza-slice"></i>
-                <h3>LUNCH/DINNER WITH FREE SOUP OF THE DAY</h3>
-                <p>
-                    Here at Robiel Prince Cafe, we make every meal an experience to remember. Our lunch and dinner offerings are crafted with the 
-                    freshest ingredients, bringing together flavors that are both comforting and exciting. And as a special treat, every order 
-                    comes with a complimentary Soup of the Day, made fresh daily to warm your soul and start your meal on a delightful note. 
-                    Whether you're looking for a quick bite or a leisurely meal, our menu is designed to satisfy your hunger and elevate your 
-                    dining experience. Come and enjoy a delicious journey with us.
-                </p>
-            </div>
-            <div class="feature">
-                <i class="fas fa-wifi"></i>
-                <h3>DRINKS/BEVERAGES</h3>
-                <p>
-                    Here at Robiel Prince Cafe, our beverage menu is crafted to complement every meal and enhance your visit. From invigorating 
-                    coffees and teas to refreshing smoothies and indulgent shakes, we offer a diverse selection of drinks designed to suit every 
-                    taste and occasion. Whether you're seeking a revitalizing start to your day, a mid-afternoon pick-me-up, or a perfect pairing 
-                    for your meal, our carefully curated beverages provide the ideal balance of flavor and refreshment. Explore our drink menu and 
-                    find your favorite way to unwind and savor each moment.
-                </p>
+                <div class="feature-box">
+                    <img src="{{ asset('css/bfast.jpg') }}" alt="">
+                    <h3>Morning Delights & Snack Staples</h3>
+                    <p>
+                        Start your day with our comforting breakfast classics or enjoy a quick, energizing snack. 
+                        At Robiel Prince Cafe, we offer a delicious selection that balances taste and quality, perfect for any craving. 
+                        Dive into our menu and discover your new favorite bite!
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <img src="{{ asset('css/lunch.jpg') }}" alt="">
+                    <h3>Delicious Meals & Free Soup</h3>
+                    <p>
+                        Enjoy our fresh, flavorful lunch and dinner options, paired with a complimentary Soup of the Day. 
+                        Whether you're after a quick bite or a relaxed meal, 
+                        we’ve got something to satisfy every craving.
+                    </p>
+                </div>
+
+                <div class="feature-box">
+                    <img src="{{ asset('css/drinks.jpg') }}" alt="">
+                    <h3>Refreshing Drinks & Beverages</h3>
+                    <p>
+                        From energizing coffees to refreshing smoothies and indulgent shakes, our 
+                        drink menu offers something for every taste. Whether you need a pick-me-up or 
+                        the perfect pairing for your meal, we've got you covered!
+                    </p>
+                </div>
             </div>
         </section>
-    </main>
+
+        <section class="best-seller">
+            <div class="heading">Our <span>Best Seller</span></div> 
+            <div class="seller-box"> 
+                <div class="bfast">Trending <span><i class="fa-solid fa-fire"></i></span></div>
+                <div class="first-section"> 
+
+                    <div class="firstsection-box"> 
+                        <img src="{{ asset('css/img1.jpg') }}" alt="">
+                        <h3>Egg Sandwinch</h3>
+                        <div class="price">$1.2</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="check-btn">Buy</a>
+                    </div>
+
+                    <div class="firstsection-box"> 
+                        <img src="{{ asset('css/img2.jpg') }}" alt="">
+                        <h3>Tapsilog</h3>
+                        <div class="price">$1.2</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="check-btn">Buy</a>
+                    </div>
+
+                    <div class="firstsection-box"> 
+                        <img src="{{ asset('css/img3.jpg') }}" alt="">
+                        <h3>Pancit Bihon</h3>
+                        <div class="price">$1.2</div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <a href="#" class="check-btn">Buy</a>
+                    </div> 
+                </div>
+            </div>
+        </section>
 @endsection

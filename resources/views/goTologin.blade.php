@@ -1,47 +1,43 @@
-<!-- resources/views/goTologin.blade.php -->
 @extends('Components.Layout')
 
 @section('title', 'Log in')
- 
+
 @section('content')
-    <main class="login-main">
-        <div class="background-blur"></div>
-        <div class="login-container">
-            <h1>Login</h1>
-            
-        <!-- for log in form-->
-            <form action="/homepage" method="POST">
-                @csrf
-                <input type="text" name="username" placeholder="Enter your name" value="{{ old('username') }}" required>
-                <div class="age_confirmationForm">
-                    <h5>Are you 18 years old and above?</h5>
+<main class="login-main">
+    <div class="background-blur"></div>
+    <div class="login-container">
+        <h1>Login</h1>
 
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="check1" name="check1" value="yes">
-                        <label for="check1">Yes</label>
+        <!-- Single Login Form -->
+        <form id="loginForm" action="/homepage" method="POST">
+            @csrf
+            <!-- Username input -->
+            <input type="text" name="username" placeholder="Enter your name" value="{{ old('username') }}" required pattern="[A-Za-z]+" title="Only alphabetic characters are allowed.">
 
-                        <input type="checkbox" id="check2" name="check2" value="no">
-                        <label for="check1">No</label>
-                    </div>
-
+            @if ($errors->has('username'))
+                <div class="error-message" style="color: red;">
+                    {{ $errors->first('username') }}
                 </div>
-                
-                <!-- Display validation errors for the username -->
-                @if ($errors->has('username'))
+            @endif
+
+            <!-- Age confirmation -->
+            <div id="ageConfirmation">
+                <label for="birthday">Enter your birthday:</label>
+            </div>
+
+            <!-- Birthdate input -->
+            <div id="birthdayInput">
+                <input type="date" name="birthday" id="birthday" min="1900-01-01" required>
+                @if ($errors->has('birthday'))
                     <div class="error-message">
-                        {{ $errors->first('username') }}
+                        {{ $errors->first('birthday') }}
                     </div>
                 @endif
-                
-                <button type="submit">Login</button>
-            </form>
-            
-            <!-- Second Form for Guest Login -->
-            <form action="/homepage" method="POST">
-                @csrf
-                <input type="hidden" name="username" value="Guest">
-                <button type="submit">Login as Guest</button>
-            </form>
-        </div>
-    </main>
+            </div>
+
+            <!-- Login button -->
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</main>
 @endsection

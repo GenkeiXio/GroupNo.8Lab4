@@ -906,3 +906,42 @@ form textarea::placeholder{
   height: auto; /* Maintain aspect ratio */
   margin: 20px 0; /* Add some space above and below the image */
 }
+
+/*Restricted Area css style*/
+
+.restricted-main {
+  /* Center the content horizontally and vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92vh;
+  background-color: #2f2f2f; /* Dark gray-blue background */
+  border: 1px solid #434a54; /* Dark gray-blue border */
+  padding: 20px;
+  text-align: center;
+}
+
+.restricted-page h1 {
+  /* Make the heading stand out with a bold, warning color */
+  color: #ff9900; /* Bright orange-yellow color for the text */
+  font-size: 2.5rem; /* Even larger font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a subtle shadow to the text */
+}
+
+.restricted-page h1::before {
+  /* Add a warning icon before the heading */
+  font-family: 'Font Awesome 5 Free';
+  content: '\f071';
+  margin-right: 10px;
+  color: #ff9900;
+}
+
+.restricted-page {
+  /* Add a warning or alert-like styling to the restricted page container */
+  background-color: #363636; /* Dark gray background */
+  padding: 20px;
+  border: 1px solid #434a54; /* Dark gray-blue border */
+  border-radius: 10px;
+}
